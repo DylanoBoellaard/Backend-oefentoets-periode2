@@ -13,3 +13,14 @@ try {
 } catch(PDOException $e) {
     echo $e->getMessage();
 }
+
+$sql = "INSERT INTO RichestPeople (Id
+                                    ,Name
+                                    ,Networth
+                                    ,Age
+                                    ,Mycompany)
+        VALUES                      (NULL
+                                    ,:name
+                                    ,networth
+                                    ,age
+                                    ,mycompany);";
