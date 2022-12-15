@@ -53,7 +53,7 @@ foreach ($result as $info) {
 
 ?>
 
-<a href="index.html">Home page</a>
+<a href="index.php">Home page</a>
 <h3>Persoonsgegevens</h3>
 <table border="1">
     <thead>

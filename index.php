@@ -7,15 +7,17 @@
     <title>Oefentoets periode 2</title>
 </head>
 <body>
+    <h3>Richest people</h3>
+    <a href="read.php">DB Table</a>
     <form action="create.php" method="post">
         <label for="name">Name</label>
-            <input type="text" name="name" id="name">
+            <input type="text" name="name" id="name"><br>
         <label for="networth">Networth</label>
-            <input type="text" name="networth" id="networth">
+            <input type="text" name="networth" id="networth"><br>
         <label for="age">Age</label>
-            <input type="text" name="age" id="age">
+            <input type="text" name="age" id="age"><br>
         <label for="mycompany">MyCompany</label>
-            <input type="text" name="mycompany" id="mycompany">
+            <input type="text" name="mycompany" id="mycompany"><br>
         <input type="submit" value="Submit">
     </form>
 </body>
