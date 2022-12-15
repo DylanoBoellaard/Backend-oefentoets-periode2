@@ -24,3 +24,14 @@ $sql = "INSERT INTO RichestPeople (Id
                                     ,networth
                                     ,age
                                     ,mycompany);";
+
+$statement = $pdo->prepare($sql);
+
+$statement->bindValue(':name', $_POST['name'], PDO::PARAM_STR);
+$statement->bindValue(':networth', $_POST['networth'], PDO::PARAM_STR);
+$statement->bindValue(':age', $_POST['age'], PDO::PARAM_STR);
+$statement->bindValue(':mycompany', $_POST['mycompany'], PDO::PARAM_STR);
+
+$statement->execute();
+
+header('Location: read.php');
