@@ -22,7 +22,7 @@ $sql = "SELECT Id
             ,Age
             ,Mycompany
         FROM RichestPeople
-        ORDER BY Id ASC";
+        ORDER BY Networth ASC";
 
 $statement = $pdo->prepare($sql);
 
@@ -33,7 +33,6 @@ $result = $statement->fetchAll(PDO::FETCH_OBJ);
 $rows = "";
 foreach ($result as $info) {
     $rows .= "<tr>
-                <td>$info->Id</td>
                 <td>$info->Name</td>
                 <td>$info->Networth</td>
                 <td>$info->Age</td>
@@ -41,11 +40,6 @@ foreach ($result as $info) {
                 <td>
                     <a href='delete.php?id={$info->Id}'>
                         <img src='b_drop.png' alt='Drop'</img>
-                    </a>
-                </td>
-                <td>
-                    <a href='update.php'>
-                        <img src='b_edit.png' alt='Edit'</img>
                     </a>
                 </td>
              <tr>";
@@ -57,7 +51,6 @@ foreach ($result as $info) {
 <h3>Persoonsgegevens</h3>
 <table border="1">
     <thead>
-        <th>Id</th>
         <th>Name</th>
         <th>Networth</th>
         <th>Age</th>
